@@ -1,0 +1,2131 @@
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsuarios (20111010115521)
+  [1m[35m (0.7ms)[0m  CREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("usuarios")[0m
+  [1m[35m (15.5ms)[0m  CREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("usuarios")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_usuarios_on_email')
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111010115521')
+  [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("usuarios")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_usuarios_on_reset_password_token')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_usuarios_on_email')[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-10-10 09:09:05 -0300
+Served asset /rails.png - 200 OK (7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-10-10 09:09:21 -0300
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:09:47 -0300
+  Processing by HomeController#index as HTML
+Completed   in 11ms
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:09:47 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (2.5ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (96.4ms)
+Compiled application.css  (1ms)  (pid 2540)
+Compiled home.css  (26ms)  (pid 2540)
+Compiled application.js  (18ms)  (pid 2540)
+Compiled jquery.js  (22ms)  (pid 2540)
+Compiled jquery_ujs.js  (5ms)  (pid 2540)
+Compiled home.js  (106ms)  (pid 2540)
+Completed 200 OK in 679ms (Views: 448.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:09:48 -0300
+Served asset /application.css - 200 OK (62ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:09:48 -0300
+Served asset /home.css - 200 OK (19ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:09:48 -0300
+Served asset /jquery.js - 200 OK (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:09:48 -0300
+Served asset /jquery_ujs.js - 200 OK (11ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:09:48 -0300
+Served asset /home.js - 200 OK (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:09:48 -0300
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2011-10-10 09:10:10 -0300
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (1.4ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/registrations/new.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 119ms (Views: 42.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:10:11 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:10:11 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:10:11 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:10:11 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:10:11 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:10:11 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:10:35 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (54.6ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 118ms (Views: 71.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:10:35 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:10:35 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:10:35 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:10:35 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:10:35 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:10:35 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2011-10-10 09:11:45 -0300
+
+ActionController::RoutingError (No route matches [GET] "/usuarios"):
+  
+
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:11:52 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (1.4ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 58ms (Views: 16.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:11:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:11:52 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:11:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:11:52 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:11:52 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:11:52 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:15:22 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (1.8ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 52ms (Views: 16.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:15:22 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:15:22 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:22 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:22 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:22 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:15:23 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (1.3ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 105ms (Views: 15.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:15:23 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:23 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:15:23 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:23 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:23 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:23 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:15:24 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (1.3ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 59ms (Views: 15.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:15:24 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:15:24 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:24 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:24 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:24 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:24 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:15:47 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (2.2ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (93.7ms)
+Completed 200 OK in 407ms (Views: 232.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:15:48 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:15:48 -0300
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:48 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:48 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:48 -0300
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:15:48 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:21:17 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (0.7ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 61ms (Views: 17.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:21:17 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:21:17 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:21:17 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:21:17 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:21:17 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:21:17 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  SELECT 1 FROM "usuarios" WHERE "usuarios"."email" = 'usuario@padrao.com' LIMIT 1
+  [1m[36mSQL (22.1ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 10 Oct 2011 12:22:00 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "usuario@padrao.com"], ["encrypted_password", "$2a$10$eqcjCnhLZzCgsT5rK27TCO6M9odLGodLVLNv9iaqdvH6ZPLhSBMoa"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Mon, 10 Oct 2011 12:22:00 UTC +00:00]]
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:22:51 -0300
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iG3lP5kZfjPwyzJJQQg6nUswqfKImqGi30Rf9xOuWmM=", "usuario"=>{"email"=>"usuario@padrao.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'usuario@padrao.com' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  UPDATE "usuarios" SET "last_sign_in_at" = '2011-10-10 12:22:51.740954', "current_sign_in_at" = '2011-10-10 12:22:51.740954', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-10-10 12:22:51.741743' WHERE "usuarios"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 396ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:22:51 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 90ms (Views: 9.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:22:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:22:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:22:52 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:22:52 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:22:52 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:22:52 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:23:14 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 13.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:23:14 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:23:14 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:23:14 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:23:14 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:23:14 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:23:14 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:23:21 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 103ms (Views: 9.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:23:21 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:23:21 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:23:21 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:23:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:23:21 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:23:21 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:50:51 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 55ms (Views: 10.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:50:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:50:52 -0300
+Served asset /home.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:50:52 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:50:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:50:52 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:50:52 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:51:05 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 51ms (Views: 9.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:51:05 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:05 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:05 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:05 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:05 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:51:05 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:51:13 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 106ms (Views: 11.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:51:13 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:13 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:13 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:51:13 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:13 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:13 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_out" for 127.0.0.1 at 2011-10-10 09:51:15 -0300
+
+ActionController::RoutingError (No route matches [GET] "/usuarios/sign_out"):
+  
+
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2011-10-10 09:51:26 -0300
+
+ActionController::RoutingError (No route matches [GET] "/usuarios"):
+  
+
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:51:31 -0300
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:51:32 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 11.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:51:32 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:51:32 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:32 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:32 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:32 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:51:32 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:52:04 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 56ms (Views: 11.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:52:04 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:52:04 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:52:04 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:52:04 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:52:04 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:52:04 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/usuarios/sign_out" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iG3lP5kZfjPwyzJJQQg6nUswqfKImqGi30Rf9xOuWmM="}
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+  Processing by HomeController#index as HTML
+Completed   in 10ms
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (0.7ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 52ms (Views: 17.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:52:18 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 09:55:51 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (0.7ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 107ms (Views: 17.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 09:55:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 09:55:52 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 09:55:52 -0300
+Served asset /home.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 09:55:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 09:55:52 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 09:55:52 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:31:47 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (1.0ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 57ms (Views: 15.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:31:47 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:31:47 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:31:47 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:31:47 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:31:47 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:31:47 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:32:19 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (0.7ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 55ms (Views: 15.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:32:19 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:32:19 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:32:19 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:32:19 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:32:19 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:32:19 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:33:49 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (0.9ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 112ms (Views: 18.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:33:49 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:33:49 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:33:49 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:33:49 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:33:49 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:33:49 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:35:52 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (0.8ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 57ms (Views: 15.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:35:52 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:35:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:35:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:35:52 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:35:52 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:35:52 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:35:53 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (0.7ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 50ms (Views: 16.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:35:53 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:35:53 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:35:53 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:35:53 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:35:53 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:35:53 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:39:48 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (2.3ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 424ms (Views: 244.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:39:49 -0300
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:39:49 -0300
+Served asset /home.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:39:49 -0300
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:39:49 -0300
+Served asset /home.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:39:49 -0300
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:39:49 -0300
+Served asset /application.js - 200 OK (2ms)
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:39:53 -0300
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J/z5BRp3FKJnO795Tfh5RqjtsedbqUWS42u3hWzBpNg=", "usuario"=>{"email"=>"usuario@padrao.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'usuario@padrao.com' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE "usuarios" SET "current_sign_in_at" = '2011-10-10 13:39:54.043968', "sign_in_count" = 2, "updated_at" = '2011-10-10 13:39:54.044790' WHERE "usuarios"."id" = 1
+Redirected to http://localhost:1234/
+Completed 302 Found in 396ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:39:54 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 128ms (Views: 11.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:39:54 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:39:54 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:39:54 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:39:54 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:39:54 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:39:54 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:40:22 -0300
+
+Errno::ENOENT (No such file or directory - /home/aluno/projetos/aula05/pagamento/config/locales/devise.pt-Br.yml):
+  
+
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.2ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:40:38 -0300
+
+Errno::ENOENT (No such file or directory - /home/aluno/projetos/aula05/pagamento/config/locales/devise.pt-Br.yml):
+  
+
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:40:40 -0300
+
+Errno::ENOENT (No such file or directory - /home/aluno/projetos/aula05/pagamento/config/locales/devise.pt-Br.yml):
+  
+
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:40:55 -0300
+
+Errno::ENOENT (No such file or directory - /home/aluno/projetos/aula05/pagamento/config/locales/devise.pt-Br.yml):
+  
+
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J/z5BRp3FKJnO795Tfh5RqjtsedbqUWS42u3hWzBpNg=", "usuario"=>{"email"=>"usuario@padrao.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'usuario@padrao.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "usuarios" SET "last_sign_in_at" = '2011-10-10 13:39:54.043968', "current_sign_in_at" = '2011-10-10 13:41:38.330405', "sign_in_count" = 3, "updated_at" = '2011-10-10 13:41:38.331114' WHERE "usuarios"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 289ms
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (0.9ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 66ms (Views: 17.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (1.2ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 121ms (Views: 21.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 113ms (Views: 10.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:41:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:42:12 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 449ms (Views: 178.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:42:13 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:42:13 -0300
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:13 -0300
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:13 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:13 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:13 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started DELETE "/usuarios/sign_out" for 127.0.0.1 at 2011-10-10 10:42:15 -0300
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J/z5BRp3FKJnO795Tfh5RqjtsedbqUWS42u3hWzBpNg="}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:42:15 -0300
+  Processing by HomeController#index as HTML
+Completed   in 15ms
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:42:15 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/shared/_links.erb (1.9ms)
+Rendered /home/aluno/.rvm/gems/ruby-1.9.2-p290/gems/devise-1.4.7/app/views/devise/sessions/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 82ms (Views: 36.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:42:15 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:15 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:15 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:42:16 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:16 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:16 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:42:23 -0300
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"55irNQODf5SOk9ghHrAk+rq4LP4O/Bz/aSTILcma60A=", "usuario"=>{"email"=>"usuario@padrao.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'usuario@padrao.com' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  UPDATE "usuarios" SET "last_sign_in_at" = '2011-10-10 13:41:38.330405', "current_sign_in_at" = '2011-10-10 13:42:23.346994', "sign_in_count" = 4, "updated_at" = '2011-10-10 13:42:23.347822' WHERE "usuarios"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 412ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:42:23 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 67ms (Views: 15.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:42:23 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:42:23 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:23 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:23 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:23 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:42:23 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:50:53 -0300
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 316ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:50:53 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 218ms (Views: 177.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:50:54 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:50:54 -0300
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:50:54 -0300
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:50:54 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:50:54 -0300
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:50:54 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/usuarios/sign_out" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"55irNQODf5SOk9ghHrAk+rq4LP4O/Bz/aSTILcma60A="}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 96ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+  Processing by HomeController#index as HTML
+Completed   in 16ms
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 117ms (Views: 82.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:51:00 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:51:42 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 60ms (Views: 16.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:51:42 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:42 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:42 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:42 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:42 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:51:42 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:51:48 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 53ms (Views: 17.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:51:48 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:51:49 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:49 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:49 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:49 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:49 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:51:57 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 110ms (Views: 20.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:51:58 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:51:58 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:58 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:58 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:58 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:51:58 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:52:01 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 56ms (Views: 21.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:52:02 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:52:02 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:02 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:02 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:02 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:52:20 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 103ms (Views: 16.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:52:21 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:52:21 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:21 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:21 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:21 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:52:41 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 58ms (Views: 16.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:52:41 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:41 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:41 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:52:41 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:41 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:52:41 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:53:18 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 58ms (Views: 16.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:53:19 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:53:19 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:53:19 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:53:19 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:53:19 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:53:19 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:53:30 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 106ms (Views: 16.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:53:30 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:53:30 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:53:30 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:53:30 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:53:30 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:53:30 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:54:21 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 58ms (Views: 16.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:54:21 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:21 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:21 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:21 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:54:21 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:54:46 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 51ms (Views: 16.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:54:46 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:46 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:54:46 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:46 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:46 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:54:50 -0300
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2ObaMhDMH9z+KufOJV+A4AJ9LAjeJCloaWWZbrDAJPg=", "usuario"=>{"email"=>"usuario@padrao.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Acessar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'usuario@padrao.com' LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mUPDATE "usuarios" SET "last_sign_in_at" = '2011-10-10 13:42:23.346994', "current_sign_in_at" = '2011-10-10 13:54:50.641944', "sign_in_count" = 5, "updated_at" = '2011-10-10 13:54:50.643092' WHERE "usuarios"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 424ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:54:50 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 56ms (Views: 11.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:54:51 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:51 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:51 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:51 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:51 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:54:51 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started DELETE "/usuarios/sign_out" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2ObaMhDMH9z+KufOJV+A4AJ9LAjeJCloaWWZbrDAJPg="}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 106ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+  Processing by HomeController#index as HTML
+Completed   in 14ms
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 49ms (Views: 15.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:54:58 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:56:09 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 58ms (Views: 16.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:56:09 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:56:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:56:09 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:56:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:56:09 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:56:09 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:58:19 -0300
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 108ms (Views: 15.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:58:20 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:58:20 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:58:20 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:58:20 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:58:20 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:58:20 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 10:58:26 -0300
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I7trTnhVsC/wK5RAERNBuMQfFRzNBdnrLIFNWBidmHo=", "usuario"=>{"email"=>"usuario@padrao.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Acessar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'usuario@padrao.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE "usuarios" SET "last_sign_in_at" = '2011-10-10 13:54:50.641944', "current_sign_in_at" = '2011-10-10 13:58:26.265315', "sign_in_count" = 6, "updated_at" = '2011-10-10 13:58:26.266045' WHERE "usuarios"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 230ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 10:58:26 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 53ms (Views: 10.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 10:58:26 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 10:58:26 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 10:58:26 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 10:58:26 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 10:58:26 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 10:58:26 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:07:54 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 466ms (Views: 183.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:07:55 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:07:55 -0300
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:07:55 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:07:55 -0300
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:07:55 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:07:55 -0300
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 11:08:01 -0300
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:08:01 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 67ms (Views: 14.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:08:01 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:02 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:08:02 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:02 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:02 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:08:06 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 101ms (Views: 10.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:08:06 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:06 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:06 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:08:06 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:06 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:06 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 11:08:18 -0300
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 225ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:08:18 -0300
+  Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 116ms (Views: 11.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:08:18 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:18 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:18 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:08:18 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:18 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:08:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:09:28 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 60ms (Views: 10.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:09:28 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:09:28 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:09:28 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:09:28 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:09:28 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:09:28 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2011-10-10 11:09:32 -0300
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 240ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:09:32 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 52ms (Views: 11.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:09:33 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:09:33 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:09:33 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:09:33 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:09:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:09:33 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/password/new" for 127.0.0.1 at 2011-10-10 11:12:38 -0300
+  Processing by Devise::PasswordsController#new as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:12:38 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 61ms (Views: 13.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:12:38 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:12:38 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:12:38 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:12:38 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:12:38 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:12:38 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/usuarios/password/new" for 127.0.0.1 at 2011-10-10 11:12:51 -0300
+  Processing by Devise::PasswordsController#new as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:12:51 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 106ms (Views: 10.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:12:51 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:12:51 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:12:51 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:12:51 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:12:51 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:12:51 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/usuarios/password/new" for 127.0.0.1 at 2011-10-10 11:13:01 -0300
+  Processing by Devise::PasswordsController#new as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 11:13:01 -0300
+  Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 104ms (Views: 10.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 11:13:01 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 11:13:01 -0300
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 11:13:01 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 11:13:01 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 11:13:01 -0300
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 11:13:01 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsuarios (20111010115521)
+Migrating to CreateFornecedores (20111010144928)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "fornecedores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cnpf_cpf" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111010144928')
+Migrating to AddNomeToFornecedores (20111010145956)
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "fornecedores" ADD "nome" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111010145956')
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("fornecedores")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("usuarios")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_usuarios_on_reset_password_token')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_usuarios_on_email')
+
+
+Started GET "/fornecedores" for 127.0.0.1 at 2011-10-10 12:03:23 -0300
+  Processing by FornecedoresController#index as HTML
+  [1m[36mFornecedor Load (0.3ms)[0m  [1mSELECT "fornecedores".* FROM "fornecedores" [0m
+Rendered fornecedores/index.html.erb within layouts/application (30.1ms)
+Compiled application.css  (3ms)  (pid 4175)
+Compiled fornecedores.css  (14ms)  (pid 4175)
+Compiled scaffolds.css  (16ms)  (pid 4175)
+Compiled application.js  (7ms)  (pid 4175)
+Compiled fornecedores.js  (116ms)  (pid 4175)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1
+Completed 200 OK in 484ms (Views: 481.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /application.css - 200 OK (26ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /scaffolds.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/fornecedores.css?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /fornecedores.css - 200 OK (9ms)
+
+
+Started GET "/assets/fornecedores.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /fornecedores.js - 200 OK (16ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /home.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:24 -0300
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/fornecedores/new" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+  Processing by FornecedoresController#new as HTML
+Rendered fornecedores/_form.html.erb (11.0ms)
+Rendered fornecedores/new.html.erb within layouts/application (35.2ms)
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 129ms (Views: 127.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fornecedores.css?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /fornecedores.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fornecedores.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /fornecedores.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
+Served asset /home.js - 304 Not Modified (0ms)

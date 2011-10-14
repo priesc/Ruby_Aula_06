@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pagamento</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+
+</head>
+<body>
+
+<% if current_usuario %>
+
+	<%= link_to 'Sair', destroy_usuario_session_path, method: :delete %>  
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+<% end %>
+
+<%= yield %>
+	
+
+</body>
+</html>
