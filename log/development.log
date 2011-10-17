@@ -2129,3 +2129,38 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2011-10-10 12:03:30 -0300
 Served asset /home.js - 304 Not Modified (0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsuarios (20111010115521)
+Migrating to CreateFornecedores (20111010144928)
+Migrating to AddNomeToFornecedores (20111010145956)
+Migrating to SepararCpfCnpj (20111017120036)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsuarios (20111010115521)
+Migrating to CreateFornecedores (20111010144928)
+Migrating to AddNomeToFornecedores (20111010145956)
+Migrating to SepararCpfCnpj (20111017120036)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsuarios (20111010115521)
+Migrating to CreateFornecedores (20111010144928)
+Migrating to AddNomeToFornecedores (20111010145956)
+Migrating to SepararCpfCnpj (20111017120036)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE TEMPORARY TABLE "altered_fornecedores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cnpj" varchar(255), "created_at" datetime, "updated_at" datetime, "nome" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("fornecedores")
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "fornecedores"[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "fornecedores"
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "fornecedores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cnpj" varchar(255), "created_at" datetime, "updated_at" datetime, "nome" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("altered_fornecedores")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "altered_fornecedores"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "altered_fornecedores"
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "fornecedores" ADD "cpf" varchar(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "fornecedores" ADD "pj" boolean
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111017120036')[0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("fornecedores")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("usuarios")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_usuarios_on_reset_password_token')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_usuarios_on_email')[0m
